@@ -20,7 +20,10 @@ describe('Homepage', () => {
   let page;
 
   const testPage = path => async () => {
-    await page.goto(`${BASE_URL}${path}`, { waitUntil: 'networkidle2' });
+    await page.goto(`${BASE_URL}${path}`);
+    await page.waitForSelector('footer', {
+      timeout: 2000,
+    });
     const haveFooter = await page.evaluate(
       () => document.getElementsByTagName('footer').length > 0
     );
