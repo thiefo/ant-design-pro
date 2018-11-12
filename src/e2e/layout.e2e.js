@@ -38,7 +38,8 @@ describe('Homepage', () => {
 
   RouterConfig.forEach(({ routes = [] }) => {
     formatter(routes).forEach(route => {
-      it(`test pages ${route}`, testPage(route));
+      console.log(`test pages ${route}`);
+      fit(`test pages ${route}`, testPage(route));
     });
   });
 
