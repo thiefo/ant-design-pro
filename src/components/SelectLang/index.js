@@ -38,6 +38,12 @@ export default class SelectLang extends PureComponent {
           </span>{' '}
           Português
         </Menu.Item>
+       <Menu.Item key="tr-TR">
+          <span role="img" aria-label="Turkish">
+            TR
+          </span>{' '}
+          Türkçe
+        </Menu.Item>
       </Menu>
     );
     return (
